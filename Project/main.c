@@ -9,7 +9,7 @@ int main(void)
 	TIM2_Configuration();
 	TIME_Configuration();			 //TIM4/5≈‰÷√
 	//EXTI_Configuration();
-	myprintf(USART1,"1v1000\r");
+	//myprintf(USART1,"1v1000\r");
 	
 	while(1)
 	{

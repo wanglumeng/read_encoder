@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\MINISTM32\MINISTM32.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\MINISTM32\MINISTM32.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050106: Last Updated: Sun Dec 27 23:07:32 2015
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050106: Last Updated: Sun Dec 27 23:08:34 2015
 <BR><P>
 <H3>Maximum Stack Usage =        168 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -596,9 +596,9 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 168<LI>Call Chain = TIM2_IRQHandler &rArr; myprintf &rArr; __c89vsnprintf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;readEncoder
+<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;myprintf
 <LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_GetITStatus
 <LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_ClearITPendingBit
-<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;myprintf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
 </UL>
@@ -816,11 +816,10 @@ Global Symbols
 
 <P><STRONG><a name="[a7]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
 
-<P><STRONG><a name="[46]"></a>main</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, main.o(i.main))
-<BR><BR>[Stack]<UL><LI>Max Depth = 160<LI>Call Chain = main &rArr; myprintf &rArr; __c89vsnprintf
+<P><STRONG><a name="[46]"></a>main</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, main.o(i.main))
+<BR><BR>[Stack]<UL><LI>Max Depth = 92<LI>Call Chain = main &rArr; TIME_Configuration &rArr; TIM_ICInit &rArr; TI2_Config
 </UL>
-<BR>[Calls]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;myprintf
-<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Configuration
+<BR>[Calls]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Configuration
 <LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIME_Configuration
 <LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM2_Configuration
 <LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_Configuration
@@ -838,7 +837,6 @@ Global Symbols
 <LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__c89vsnprintf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[26]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM2_IRQHandler
-<LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
 <P><STRONG><a name="[75]"></a>readEncoder</STRONG> (Thumb, 36 bytes, Stack size 16 bytes, encoder.o(i.readEncoder))
